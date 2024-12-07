@@ -1,0 +1,13 @@
+extends common/layout.pug
+
+block layout-content
+  h1 Narmin's Skills
+  if skills.length
+    .skills-container
+      ul
+        each skill in skills
+          li
+            strong Name: 
+            | #{skill.name}
+            p Level: 
+            | #{skill.level}

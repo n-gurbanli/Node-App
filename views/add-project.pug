@@ -1,0 +1,15 @@
+extends common/layout.pug
+
+block layout-content
+  h1 Add New Project
+  form(action="/projects", method="POST") 
+    label(for="title") Project Title:
+    input(type="text" id="title" name="title" required)
+    
+    label(for="description") Project Description:
+    textarea(id="description" name="description" required)
+    
+    label(for="link") Project Link:
+    input(type="url" id="link" name="link" required)
+    
+    button(type="submit") Add Project

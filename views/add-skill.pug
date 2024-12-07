@@ -1,0 +1,12 @@
+extends common/layout.pug
+
+block layout-content
+  h1 Add New Skill
+  form(action="/skills", method="POST")
+    label(for="name") Skill Name:
+    input(type="text" id="name" name="name" required)
+    
+    label(for="level") Skill Level:
+    input(type="text" id="level" name="level" required)
+    
+    button(type="submit") Add Skill

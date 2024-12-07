@@ -1,0 +1,14 @@
+extends common/layout.pug
+
+block layout-content
+  h1 Narmin's Projects
+  if projects.length
+    .projects-container
+      ul
+        each project in projects
+          li
+            strong Title: 
+            | #{project.title}
+            p Description: 
+            | #{project.description}
+            a(href=project.link) View Project
